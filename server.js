@@ -15,7 +15,7 @@ const hbs = exphbs.create({ helper });
 const sess = {
     secret: 'super secret secret',
     cookies: {
-        maxAge: 30000 , 
+        maxAge: 300000 , 
         http0nly: true, 
         secure: false , 
         sameSite: 'strict', 
@@ -39,6 +39,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false}).then(() => {
-    app.listen(PORT, () => console.log('Now listening on FM 3001'));
+    app.listen(PORT, () => console.log('Now listening on Radio FM 3001'));
 
 });
