@@ -5,5 +5,7 @@ function formatDate(date) {
 }
 
 module.exports = {
-    formatDate
-}
+    formatDate: (date) => {
+        return date.toLocaleDateString();
+    },
+};
